@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+  <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+</head>
+
+<body>
+
+
+  <div class="container">
+
+    <nav class="navbar bg-body-tertiary">
+
+
+      <div class="container-fluid search-part">
+        <a href="/"
+          style="background: transparent; color: black; border: 1px solid black; padding: 0px 10px 0px 10px; align-self: center;">Home</a>
+        
+        
+
+        <form role="search" method="get" action="/findPost">
+
+          <a href="/" style=" background: transparent; margin: 0px 25px;">
+            <img src="/icons/home.svg" alt="home logo" style="height: 40px; width: auto; " />
+          </a>
+
+
+          <input class="form-control" name="id" style="margin-top: 1.5em;" type="search" placeholder="Search ID" aria-label="Search">
+
+
+
+          <button class="btn btn-outline-success col-sm-3" style="margin-left: 2em; width: 8em" type="submit">
+            Search
+          </button>
+
+        </form>
+
+        
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <h1>My Blog</h1>
+    <a id="newPostBtn" href="/new">New Post</a>
+    <ul id="postsList">
+      <% posts.forEach(post=> { %>
+        <li>
+          <h2>
+            <%=post.title%>
+          </h2>
+          <small>
+            <%=post.date %>
+          </small>
+          <p>
+            <%=post.content%>
+          </p>
+          <small>By: <%=post.author%> </small>
+          <small>ID: <%=post.id%> </small>
+          <a class="edit" href="/edit/<%= post.id %>">Edit</a>
+          <a class="delete" href="/api/posts/delete/<%= post.id %>">Delete</a>
+        </li>
+        <% }); %>
+    </ul>
+  </div>
+</body>
+
+</html>
+
+
+//They are the echoes of unspoken soliloquies, yearning for resonance yet sheltered by the silence of the soul's sanctuary that we hide. You can write your thoughts here
