@@ -15,8 +15,6 @@ a {
   font-family: "Arial", sans-serif;
 }
 
-
-
 body {
   background-color: #f7f9fc;
   color: #333;
@@ -111,7 +109,6 @@ li:last-child {
 
 a.edit {
   background-color: #007bff;
-  /* margin-right: 10px; */
 }
 
 a.delete {
@@ -154,9 +151,7 @@ a.delete:hover {
   background-color: #27ae60;
 }
 
-
 @media (max-width: 1000px) {
-
   .container {
     max-width: 100%;
     padding: 10px 20px;
@@ -204,16 +199,12 @@ a.delete:hover {
     width: 100%;
     margin: 10px 0;
   }
-}
-
-@media (max-width: 1000px) {
   .search-part > form > a {
     display: none;
   }
   .home-link-outside {
     display: block;
   }
-  /* rest of your styles */
 }
 
 @media (min-width: 1000px) {
@@ -224,5 +215,3 @@ a.delete:hover {
     display: block;
   }
 }
-
-
